@@ -1,1 +1,0 @@
-# test-spicy-with-nix
