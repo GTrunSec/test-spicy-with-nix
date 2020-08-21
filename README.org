@@ -13,6 +13,7 @@
 #+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t
 #+SELECT_TAGS: export
 #+EXCLUDE_TAGS: noexport
+#+PROPERTY: header-args:sh :prologue "exec 2>&1" :epilogue ":"
 
 - All of commands related to https://docs.zeek.org/projects/spicy/en/latest/getting-started.html
 
@@ -20,31 +21,30 @@
  -  built Spicy with JIT support
 
 
-#+begin_src sh  :exports both :results output
+#+begin_src sh :exports both :results output prepend
+exec 2>&1
 ./result/bin/spicyc -j hello.spicy
 #+end_src
 
-:results:
-In file included from Test.cc:6:
-In file included from /nix/store/ac4z9smhi4wcq98yh9aqc0i4bll1pszb-spicy/include/hilti/rt/libhilti.h:5:
-/nix/store/ac4z9smhi4wcq98yh9aqc0i4bll1pszb-spicy/include/hilti/rt/autogen/config.h:5:10: fatal error: 'string' file not found
-#include <string>
-         ^~~~~~~~
-1 error generated.
-[error] jit: failed to execute compilation action.
-[error] jit: failed to compile C++ code unit Test to bitcode
-[error] spicyc: JIT compilation failed
+#+RESULTS:
+: In file included from Test.cc:6:
+: In file included from /nix/store/ac4z9smhi4wcq98yh9aqc0i4bll1pszb-spicy/include/hilti/rt/libhilti.h:5:
+: /nix/store/ac4z9smhi4wcq98yh9aqc0i4bll1pszb-spicy/include/hilti/rt/autogen/config.h:5:10: fatal error: 'string' file not found
+: #include <string>
+:          ^~~~~~~~
+: 1 error generated.
+: [error] jit: failed to execute compilation action.
+: [error] jit: failed to compile C++ code unit Test to bitcode
+: [error] spicyc: JIT compilation failed
 
-:end:
 - To compile Spicy code into an actual executable on disk, use ~spicy-build~:
 
 
-#+begin_src shell :exports both :results output :session
+#+begin_src sh :async t :exports both :results output
+exec 2>&1
 ./result/bin/spicy-build -o a.out hello.spicy
 #+end_src
 
-:results:
-/nix/store/1ar9gcmvikdk1wij0cw4fnwvl5i07ag1-binutils-2.31.1/bin/ld: cannot find -lz
-clang-9: error: linker command failed with exit code 1 (use -v to see invocation)
-
-:end:
+#+RESULTS:
+: /nix/store/1ar9gcmvikdk1wij0cw4fnwvl5i07ag1-binutils-2.31.1/bin/ld: cannot find -lz
+: clang-9: error: linker command failed with exit code 1 (use -v to see invocation)
