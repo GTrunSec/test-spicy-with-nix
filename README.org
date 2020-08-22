@@ -21,8 +21,7 @@
  -  built Spicy with JIT support
 
 
-#+begin_src sh :exports both :results output prepend
-exec 2>&1
+#+begin_src sh :async t :exports both :results output prepend
 ./result/bin/spicyc -j hello.spicy
 #+end_src
 
@@ -36,12 +35,12 @@ exec 2>&1
 : [error] jit: failed to execute compilation action.
 : [error] jit: failed to compile C++ code unit Test to bitcode
 : [error] spicyc: JIT compilation failed
+: 20315eb1c9cb397c1da116b611830437
 
 - To compile Spicy code into an actual executable on disk, use ~spicy-build~:
 
 
 #+begin_src sh :async t :exports both :results output
-exec 2>&1
 ./result/bin/spicy-build -o a.out hello.spicy
 #+end_src
 
