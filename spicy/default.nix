@@ -39,7 +39,7 @@ stdenv.mkDerivation rec {
       --set CLANG_PATH      "${llvmPackages_9.clang}/bin/clang" \
       --set CLANGPP_PATH    "${llvmPackages_9.clang}/bin/clang++" \
       --set CPATH           "${lib.makeSearchPathOutput "dev" "include" [ flex bison python38 zlib glibc llvmPackages_9.libcxxabi llvmPackages_9.libcxx ]}/c++/v1" \
-      --set LIBRARY_PATH    "${lib.makeLibraryPath [ flex bison python38 glibc zlib llvmPackages_9.libclang llvmPackages_9.libcxxabi llvmPackages_9.libcxx ]}" \
+      --set LIBRARY_PATH    "${lib.makeLibraryPath [ flex bison python38 zlib glibc llvmPackages_9.libclang llvmPackages_9.libcxxabi llvmPackages_9.libcxx ]}" \
       --set NIX_CFLAGS_LINK "-lc++abi -lc++"
   '';
 
