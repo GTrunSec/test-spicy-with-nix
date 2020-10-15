@@ -1,4 +1,6 @@
-{stdenv, cmake, flex, bison, python38, zlib, llvmPackages_9, fetchFromGitHub, which, ninja }:
+{stdenv, cmake, flex, bison, python38, zlib, llvmPackages_9, fetchFromGitHub, which, ninja, lib
+, makeWrapper, glibc
+}:
 
 stdenv.mkDerivation rec {
   version = "master";
@@ -18,6 +20,7 @@ stdenv.mkDerivation rec {
   buildInputs = [ which
                   llvmPackages_9.clang-unwrapped
                   llvmPackages_9.llvm
+                  makeWrapper
                 ];
 
   preConfigure = ''
@@ -28,11 +31,17 @@ stdenv.mkDerivation rec {
   cmakeFlags = [
     "-DCMAKE_CXX_COMPILER=${llvmPackages_9.clang}/bin/clang++"
     "-DCMAKE_C_COMPILER=${llvmPackages_9.clang}/bin/clang"
-    "-DCXX_SYSTEM_INCLUDE_DIRS=${llvmPackages_9.libcxx}/include/c++/v1"
     "-DHILTI_HAVE_JIT=true"
   ];
 
-  enableParallelBuilding = true;
+  postFixup = ''
+    wrapProgram $out/bin/spicyc \
+      --set CLANG_PATH      "${llvmPackages_9.clang}/bin/clang" \
+      --set CLANGPP_PATH    "${llvmPackages_9.clang}/bin/clang++" \
+      --set CPATH           "${lib.makeSearchPathOutput "dev" "include" [ flex bison python38 zlib glibc llvmPackages_9.libcxxabi llvmPackages_9.libcxx ]}/c++/v1" \
+      --set LIBRARY_PATH    "${lib.makeLibraryPath [ flex bison python38 glibc zlib llvmPackages_9.libclang llvmPackages_9.libcxxabi llvmPackages_9.libcxx ]}" \
+      --set NIX_CFLAGS_LINK "-lc++abi -lc++"
+  '';
 
   meta = with stdenv.lib; {
     description = "C++ parser generator for dissecting protocols & files";
