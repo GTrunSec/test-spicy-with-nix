@@ -65,6 +65,6 @@ stdenv.mkDerivation rec {
     description = "C++ parser generator for dissecting protocols & files";
     homepage = https://docs.zeek.org/projects/spicy/en/latest/;
     license = licenses.bsd3;
-    platforms = with platforms; linux;
+    platforms = with platforms; unix;
   };
 }
