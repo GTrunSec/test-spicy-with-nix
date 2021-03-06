@@ -26,120 +26,7 @@
 #+end_src
 
 #+RESULTS:
-#+begin_example
-In file included from Test.cc:6:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/libhilti.h:6:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/configuration.h:9:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/util.h:22:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/types/time.h:12:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/types/interval.h:13:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/safe-int.h:7:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/3rdparty/SafeInt/SafeInt.hpp:168:
-/nix/store/1cq317pi46gf3pii9gk19gn81a9ds8md-libc++-9.0.1/include/c++/v1/cmath:313:9: error: no member named 'signbit' in the global namespace; did you mean '__signbit'?
-using ::signbit;
-      ~~^
-/nix/store/4wy9j24psf9ny4di3anjs7yk2fvfb0gq-glibc-2.31-dev/include/bits/mathcalls-helper-functions.h:25:20: note: '__signbit' declared here
-__MATHDECL_1 (int, __signbit,, (_Mdouble_ __value))
-                   ^
-In file included from Test.cc:6:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/libhilti.h:6:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/configuration.h:9:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/util.h:22:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/types/time.h:12:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/types/interval.h:13:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/safe-int.h:7:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/3rdparty/SafeInt/SafeInt.hpp:168:
-/nix/store/1cq317pi46gf3pii9gk19gn81a9ds8md-libc++-9.0.1/include/c++/v1/cmath:314:9: error: no member named 'fpclassify' in the global namespace; did you mean '__fpclassify'?
-using ::fpclassify;
-      ~~^
-/nix/store/4wy9j24psf9ny4di3anjs7yk2fvfb0gq-glibc-2.31-dev/include/bits/mathcalls-helper-functions.h:21:20: note: '__fpclassify' declared here
-__MATHDECL_1 (int, __fpclassify,, (_Mdouble_ __value))
-                   ^
-In file included from Test.cc:6:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/libhilti.h:6:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/configuration.h:9:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/util.h:22:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/types/time.h:12:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/types/interval.h:13:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/safe-int.h:7:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/3rdparty/SafeInt/SafeInt.hpp:168:
-/nix/store/1cq317pi46gf3pii9gk19gn81a9ds8md-libc++-9.0.1/include/c++/v1/cmath:315:9: error: no member named 'isfinite' in the global namespace
-using ::isfinite;
-      ~~^
-/nix/store/1cq317pi46gf3pii9gk19gn81a9ds8md-libc++-9.0.1/include/c++/v1/cmath:316:9: error: no member named 'isinf' in the global namespace
-using ::isinf;
-      ~~^
-/nix/store/1cq317pi46gf3pii9gk19gn81a9ds8md-libc++-9.0.1/include/c++/v1/cmath:317:9: error: no member named 'isnan' in the global namespace
-using ::isnan;
-      ~~^
-/nix/store/1cq317pi46gf3pii9gk19gn81a9ds8md-libc++-9.0.1/include/c++/v1/cmath:318:9: error: no member named 'isnormal' in the global namespace
-using ::isnormal;
-      ~~^
-/nix/store/1cq317pi46gf3pii9gk19gn81a9ds8md-libc++-9.0.1/include/c++/v1/cmath:319:7: error: no member named 'isgreater' in the global namespace; did you mean '::std::greater'?
-using ::isgreater;
-      ^~
-/nix/store/1cq317pi46gf3pii9gk19gn81a9ds8md-libc++-9.0.1/include/c++/v1/functional:731:29: note: '::std::greater' declared here
-struct _LIBCPP_TEMPLATE_VIS greater : binary_function<_Tp, _Tp, bool>
-                            ^
-In file included from Test.cc:6:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/libhilti.h:6:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/configuration.h:9:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/util.h:22:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/types/time.h:12:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/types/interval.h:13:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/safe-int.h:7:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/3rdparty/SafeInt/SafeInt.hpp:168:
-/nix/store/1cq317pi46gf3pii9gk19gn81a9ds8md-libc++-9.0.1/include/c++/v1/cmath:320:7: error: no member named 'isgreaterequal' in the global namespace; did you mean '::std::greater_equal'?
-using ::isgreaterequal;
-      ^~
-/nix/store/1cq317pi46gf3pii9gk19gn81a9ds8md-libc++-9.0.1/include/c++/v1/functional:760:29: note: '::std::greater_equal' declared here
-struct _LIBCPP_TEMPLATE_VIS greater_equal : binary_function<_Tp, _Tp, bool>
-                            ^
-In file included from Test.cc:6:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/libhilti.h:6:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/configuration.h:9:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/util.h:22:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/types/time.h:12:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/types/interval.h:13:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/safe-int.h:7:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/3rdparty/SafeInt/SafeInt.hpp:168:
-/nix/store/1cq317pi46gf3pii9gk19gn81a9ds8md-libc++-9.0.1/include/c++/v1/cmath:321:9: error: no member named 'isless' in the global namespace
-using ::isless;
-      ~~^
-/nix/store/1cq317pi46gf3pii9gk19gn81a9ds8md-libc++-9.0.1/include/c++/v1/cmath:322:9: error: no member named 'islessequal' in the global namespace
-using ::islessequal;
-      ~~^
-/nix/store/1cq317pi46gf3pii9gk19gn81a9ds8md-libc++-9.0.1/include/c++/v1/cmath:323:9: error: no member named 'islessgreater' in the global namespace
-using ::islessgreater;
-      ~~^
-/nix/store/1cq317pi46gf3pii9gk19gn81a9ds8md-libc++-9.0.1/include/c++/v1/cmath:324:9: error: no member named 'isunordered' in the global namespace
-using ::isunordered;
-      ~~^
-/nix/store/1cq317pi46gf3pii9gk19gn81a9ds8md-libc++-9.0.1/include/c++/v1/cmath:325:9: error: no member named 'isunordered' in the global namespace
-using ::isunordered;
-      ~~^
-In file included from Test.cc:6:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/libhilti.h:6:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/configuration.h:9:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/util.h:22:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/types/time.h:12:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/types/interval.h:13:
-In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/rt/safe-int.h:7:
-/nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/3rdparty/SafeInt/SafeInt.hpp:1204:17: error: no member named '__builtin_fpclassify' in namespace 'std'; did you mean simply '__builtin_fpclassify'?
-        switch (std::fpclassify(d))
-                ^~~~~
-/nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/hilti/3rdparty/SafeInt/SafeInt.hpp:1204:22: note: '__builtin_fpclassify' declared here
-        switch (std::fpclassify(d))
-                     ^
-/nix/store/4wy9j24psf9ny4di3anjs7yk2fvfb0gq-glibc-2.31-dev/include/math.h:886:25: note: expanded from macro 'fpclassify'
-#  define fpclassify(x) __builtin_fpclassify (FP_NAN, FP_INFINITE,            \
-                        ^
-14 errors generated.
-[error] jit: failed to execute compilation action.
-[error] jit: failed to compile C++ code unit Test to bitcode
-[error] spicyc: JIT compilation failed
-#+end_example
-: 2568b1da6e786325222e1abc6f6bc0aa
+: Hello, world!
 
 - To compile Spicy code into an actual executable on disk, use ~spicy-build~:
 
@@ -148,6 +35,10 @@ In file included from /nix/store/xnzbvnz02jwm605vxywb3bm4z9zdlyz6-spicy/include/
 ./result/bin/spicy-build -o a.out hello.spicy
 #+end_src
 
+#+begin_src sh :async t :exports both :results output
+./a.out
+#+end_src
+
 #+RESULTS:
-: /nix/store/1ar9gcmvikdk1wij0cw4fnwvl5i07ag1-binutils-2.31.1/bin/ld: cannot find -lz
-: clang-9: error: linker command failed with exit code 1 (use -v to see invocation)
+: Hello, world!
+: [error] a.out: no parsers available
